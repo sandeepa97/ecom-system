@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,4 @@ use App\Http\Controllers\WebController;
 
 //Website routes
 Route::get('/', [WebController::class, 'index']);
+Route::get('/search', [SearchController::class, 'index'])->name('search');
